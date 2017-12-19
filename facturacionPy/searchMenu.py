@@ -2,8 +2,8 @@ import time
 from os import system
 from persistence import loadData
 
-def search():
-	system("clear")
+def searchMenu():
+	system('clear')
 	
 	print("Lista de mercaderia")
 	print("===== == ==========")
@@ -12,12 +12,15 @@ def search():
 	print(" 2) Volver al menu anterior")
 	print()
 
+def search():
 	while True:
+		searchMenu()
+
 		searchOption = input("Elija una opcion: ")
-	
+		
 		if searchOption == "1":
 			time.sleep(1)
-			displayInventory()
+			showAll()
 			print()
 			input("Presione ENTER para volver al menu...")
 			time.sleep(1)
@@ -28,7 +31,12 @@ def search():
 			print("ERROR! OPCION INCORRECTA")
 			time.sleep(1)
 
-def displayInventory():
-	system("clear")
+def showAll():
+	system('clear')
+	
+	print(" Lista de Productos")
+	print(" ===== == =========")
+	print()
+	print(" Cantidad | Producto  | Precio unit. |")
 	
 	loadData()

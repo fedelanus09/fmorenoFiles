@@ -1,6 +1,7 @@
-from os import system
-
-def mainMenu():	
+def mainMenu():
+	from os import system
+	system('clear')
+	
 	print("Menu Principal")
 	print("==== =========")
 	print()
