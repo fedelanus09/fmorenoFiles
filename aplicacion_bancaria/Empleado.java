@@ -1,13 +1,14 @@
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
 
 public abstract class Empleado {
 	private int dni;
 	private String nombre;
 	private int nroLegajo;
-	private Date fechaIngreso;
+	private LocalDate fechaIngreso;
 	protected float sueldoBruto;
 	
-	public Empleado(int dni, String nombre, int nroLegajo, Date fechaIngreso, float sueldoBruto) {
+	public Empleado(int dni, String nombre, int nroLegajo, LocalDate fechaIngreso, float sueldoBruto) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.nroLegajo = nroLegajo;
@@ -21,7 +22,7 @@ public abstract class Empleado {
 		this.nroLegajo = nroLegajo;
 		this.sueldoBruto = sueldoBruto;
 		
-		fechaIngreso = new Date();
+		fechaIngreso = LocalDate.now();
 	}
 	
 	public int getDni() {
@@ -37,7 +38,11 @@ public abstract class Empleado {
 	}
 	
 	public int getAntiguedad() {
-		return antiguedad;
+		LocalDate hoy = LocalDate.now();
+		
+		Period antiguedad = Period.between(fechaIngreso, hoy);
+		
+		return antiguedad.getYears();
 	}
 	
 	public float getSueldoBruto() {
@@ -48,7 +53,5 @@ public abstract class Empleado {
 	
 	public abstract int getTributo();
 	
-	public abstract static void setBonoAntiguedad(float bonoAntiguedad);
-	
-	public abstract static float getBonoAntiguedad();
+	public abstract float getBonoAntiguedad();
 }
