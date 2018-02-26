@@ -1,29 +1,25 @@
+package com.ljv.controlador;
+
+import java.util.ArrayList;
+
 public class LiquidadorSueldos {
 	private ArrayList<Empleado> empleados;
 	
-	ArrayList<String> empleados = new ArrayList<String>();
+	public LiquidadorSuelds() {
+		empleados = new ArrayList<Empleado>();
+	}
+	
+	public int buscarPosicionEmpleado(Empleado empleado) {
+		for(int i = 0; i < empleados.size(); i++) {
+			if(empleados[i].getDNI() == empleado)
+				return 1;
+		}
+		
+		return -1
+	}
 	
 	public void altaEmpleado(Empleado empleado) {
-		int i;
-		for (i=0;i < 
-		empleados.add(Empleado);
-	}
-	
-	public void bajaEmpleado(Empleado empleado) {
-		empledos.remove(Empleado);
-	}
-	
-	public void modificarEmpleado(Empleado empleado) {
 		
 	}
-	
-	public Empleado buscarEmpleadoPorDni(int dni) {
-	
-	}
-	
-	public Empleado buscarEmpleadoPorNroLegajo(int nroLegajo) {
-	
-	}
-	
-	public void generarLiquidacionSueldos();
+
 }
