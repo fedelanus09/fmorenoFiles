@@ -1,0 +1,6 @@
+INSERT INTO seller VALUES(25976544, 'Carmen', 'Flores');
+INSERT INTO seller VALUES(23466791, 'Joaquín', 'Furriel');
+INSERT INTO seller VALUES(30244512, 'María', 'Fuentes');
+INSERT INTO seller VALUES(20144233, 'Jesús', 'Fuentes');
+INSERT INTO seller VALUES(18178677, 'Pedro', 'Iriarte');
+INSERT INTO seller VALUES(24156233, 'Luisa', 'Estevez');

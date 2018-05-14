@@ -1,0 +1,4 @@
+INSERT INTO region VALUES(1, 'Girona');
+INSERT INTO region VALUES(2, 'Barcelona');
+INSERT INTO region VALUES(3, 'Tarragona');
+INSERT INTO region VALUES(4, 'Lleida');
