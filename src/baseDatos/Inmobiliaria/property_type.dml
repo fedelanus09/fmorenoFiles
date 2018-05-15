@@ -1,8 +1,0 @@
-
-INSERT INTO property_type VALUES(1, 'Local');
-INSERT INTO property_type VALUES(2, 'Industrial');
-INSERT INTO property_type VALUES(3, 'Piso');
-INSERT INTO property_type VALUES(4, 'Parking');
-INSERT INTO property_type VALUES(5, 'Suelo');
-INSERT INTO property_type VALUES(6, 'Casa');
-INSERT INTO property_type VALUES(7, 'Oficina');
